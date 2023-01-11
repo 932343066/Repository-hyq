@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+    	<!--字符格式编码格式(中文编码 gbk gb2312) 国际编码(utf-8) 2005前使用的是gbk 2005后使用的是utf-8-->
+    	<mata http-equiv="content-Type" content="text/html" charset="utf-8"/>
+    	<mata name="keywords" content="关键字,关键词" />
+        <mata name="description" content="" />
+        <title>去掉浮动的七种方法</title>
+        <style type="text/css">
+        	body{ margin:0; padding:0;}
+			.wrap{ border:1px red solid;}
+			.wrap div{ float:left;}
+        </style>
+    </head>
+    <body>
+    	<div class="wrap">
+        	<div><img src="images/13.jpg" width="500" height="511" alt="美女" title="美女" /></div>
+            <div class="w_div"></div>
+            				<!--解决浮动塌陷的七种解决方法-->
+            <!--1、放一个子空div 给高度
+            <style type="text/css">  	缺点:违背了代码的简洁性和行为、样式、结构相分离的标准
+            	.w_div{ height:511px;}      ie6下标签是有一个最小高度为19px的 解决后也会有2px的偏差
+            </style>
+            <div class="w_div"></div>
+            -->
+            
+            <!--2、给父元素一个高度			缺点:有时候不能给父元素高度 (会子元素不能居中(不确定对不对))
+            <style type="text/css">
+            	.wrap{ height:511px;}
+            </style>
+            -->
+            
+            <!--3、给父元素加一个溢出部分隐藏
+            <style type="text/css">		缺点:如果子元素有定位  溢出了父类的范围 那就导致看不到子元素了
+            	.wrap{ overflow:hidden;}
+            </style>
+            -->
+            
+            <!--4、将父元素设置为行内块级   缺点：设置为行内块级就无法居中了
+            <style type="text/css">
+            	.wrap{ display: inline-block;}
+            </style>
+            -->
+            
+            <!--5、br换行				    缺点:违背了代码的简洁性和行为、样式、结构相分离的标准
+            <style type="text/css">			ie6下标签是有一个最小高度为19px的 解决后也会有2px的偏差
+            	br{ clear:both;}
+            </style>
+            <br />
+            -->
+            
+            <!--6、加任何标签 然后清除浮动
+            <style type="text/css">
+            	.w_div{ clear:both;}      有问题 不会用 暂时解决不了问题
+            </style>
+            -->
+            
+            <!--7、给浮动元素的父元素加伪元素清除浮动-->
+            <style type="text/css">		   /*暂无缺点 用的最多*/
+            	.wrap::after{ content:"clear"; height:0;clear:both; overflow:hidden; visibility:hidden;  display:block;}
+            </style>
+            
+        </div>
+    </body>
+</html>

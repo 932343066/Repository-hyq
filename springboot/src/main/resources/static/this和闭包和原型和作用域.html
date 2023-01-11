@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+	<head>
+    	<mata http-equiv="content-Type" content="text/html" charset="utf-8" />
+        <mata name="keywords" content="关键字,关键词" />
+        <mata name="description" content="" />
+        <title>this和闭包和原型和作用域</title>
+        <style type="text/css">
+        	body{ margin:0; padding:0;}
+        </style>
+    </head>
+    <body>
+    	<script type="text/javascript">
+		
+		/*原型 start*/
+		
+			/*直接调用方法*/
+        	function person(){
+					this.name="何业秋",
+					this.age="23"
+			}
+			function person1(){
+					this.name="何业秋1",
+					this.age="231"
+			}
+			person.prototype.sex="女";
+			var a=new person();
+			var b=new person1();
+			
+			/*原型: 只有对象才有原型prototype  对象的实例没有*/
+			
+			/*原型的方法:*/
+				/*1、isPrototypeOf():判断前者是不是后者的原型  并且后者只能是实例 不能是对象*/
+					//alert(person.prototype.isPrototypeOf(a)); //true  a不能换成a的对象person
+				/*2、Object.getPrototypeOf(实例对象):获取实例对象的对象的原型*/
+					//alert(Object.getPrototypeOf(a)==person.prototype);//true 
+				/*3、实例对象/对象.hasOwnProperty('属性名'):判断'属性名'是不是该实例对象的自身属性*/
+					//alert(person.hasOwnProperty('name'));//true 
+				/*4、'属性' in 实例对象 判断该'属性'是否存在于该实例对象或者该实例对象的原型中*/
+					//alert('sex' in a);//true 
+			/*原型 end*/
+		</script>
+        <script>
+			/*闭包 start*/
+				/*1、*/
+					temp=100;
+					function f1(){
+						var temp=101;
+						return function(){
+							temp=temp+1;
+							alert(temp);
+							}
+						}
+					var re=f1();
+					re();//102
+					re();//103
+				/*2、*/
+					temp1=100;
+					function f2(){
+						var temp1=101;
+						return function(){
+							//该temp1指向 var temp=101; 局部变量的值改变不会影响全局变量的值
+							temp1=temp1+1;
+							//该this指向全局变量temp=100; 所以无论调用多少次 this.temp1始终为100
+							alert(this.temp1)
+							}
+						}
+					var re1=f2();
+					re1();//100
+					re1();//100
+					
+					function f3(){
+						this.name="哈哈";
+						alert(this);
+						}
+					f3();//直接调用 this指向window
+					var f=new f3();
+					f;/* 实例化后调用 this指向Object  实例化后this指向f函数  但是上文也说了 function其实也	
+						 是Object*/  
+				/*什么时候产生闭包?
+					函数a的返回值为一个匿名函数(return function(){})的时候,并且该匿名函数的返回
+					函数调用了函数a的变量,使得函数a的变量不会被回收  就会造成内存泄漏 所以
+					这就产生了闭包 */
+				/*结论:
+							var a; a为局部变量  a; a为全局变量
+					用var定义的变量为局部变量 没有用var定义的变量为全局变量
+					this.变量调用的是最后一次全局变量(没用var定义的)
+					直接用变量调用的是最后一次局部变量 实例后不会初始化局部变量
+				*/ 
+			/*闭包 end*/
+			
+			/*上下文和作用域 start*/
+				/*作用域:
+					变量能够被定义在局部或者全局作用域，这导致运行时变量的访问来自不同的作
+					用域。全局变量需被声明在函数体外，在整个运行过程中都存在，能在任何作用
+					域中访问和修改。局部变量仅在函数体内定义，并且每次函数调用都有不同的作
+					用域。这主题是仅在调用中的赋值，求值和对值的操作，不能访问作用域之外的值。*/
+				/*上下文:
+					主要表现为this
+					1、没调用的函数内部this指向window
+					2、函数被调用 函数内部this指向调用的函数或者变量  一句话:谁调用该函数 该函数内部 
+					的this就指向谁
+					3、直接new对象的话 this指向该实例对象*/
+			/*上下文和作用域 end*/
+        </script>
+    </body>
+</html>

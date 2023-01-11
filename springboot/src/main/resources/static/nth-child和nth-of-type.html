@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>nth-child和nth-of-type</title>
+<style type="text/css">
+	body{
+		margin:0; 
+		padding:0;
+		}
+	p{
+		margin:0; 
+		padding:0;
+		}
+	ul{
+		list-style:none;
+		}
+	ul p{
+		border:1px blue solid;
+		}
+	ul li{
+		margin:0; 
+		padding:0; 
+		border:1px green solid;
+		}
+						/*nth-child(n)与nth-of-type(n)的区别*/
+			/*nth-child()的一些兄弟姊妹 
+				first-child   		第一个后代
+				last-child			最后一个后代
+				only-child  		后代只有一个li的ul 还不能有不是li的元素
+				nth-last-child(2)	倒数第二个后代 无论是不是li 是li就生效  不是就不生效
+				*/
+			/*nth-of-type()的一些兄弟姊妹
+				first-of-type		第一个li 不是li的不算
+				last-of-type		最后一个li 不是li的不算
+				only-child  		后代只有一个li的ul 有其他不是li的元素也算
+				nth-last-of-type(2) 倒数第二个li 不是li的不算
+				*/			
+	/*nth-child:从ul第一个后代找到最后一个(无论后代是不是li) 满足条件就执行*/
+	/*ul li:nth-child(3n+1){ color:red;}*/
+	/*nth-of-type:从ul第一个后代找到最后一个(后代必须是li) 满足条件就执行*/
+	/*ul li:nth-of-type(3n+1){ color:red;}*/
+	
+	ul li:only-child{ color:red;}
+</style>
+</head>
+
+<body>
+	<ul>
+    	<p>1、我是p标签</p>
+        <li>2、我是li</li>
+        <p>3、我是p标签</p>
+        <li>4、我是li</li>
+        <li>5、我是li</li>
+        <li>6、我是li</li>
+        <li>7、我是li</li>
+        <li>8、我是li</li>
+    </ul>
+   	<ul>	
+    	<p>1、我是p标签</p>
+        <li>8、我是li</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--四行代码都不能少-->
+<!--S-->
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<mata name="keywords" content="关键词,关键词" />
+<mata name="description" content="" />
+<title>弹幕姬</title>
+
+
+<!--E-->
+<style type="text/css">
+	 /*style S*/
+	 body{
+		margin:0;
+		}
+	.wrap{
+		margin:50px auto;
+		width:800px;
+		height:450px;
+		}
+	.wrap embed{
+		margin:0;
+		width:100%;
+		height:100%;
+		box-shadow:0 0 7px 9px black;
+		}
+	.box{
+		position:relative;
+		top:-500px;
+		left:120px;
+		width:1200px;
+		height:350px;
+		}
+	.box span{
+		position:relative;
+		}
+	.danmu{
+		position:relative;
+		top:-432px;
+		margin:auto;
+		width:500px;
+		height:30px;
+		border:none;
+		}
+	.danmu input[type='text']{
+		margin:0;
+		padding:0;
+		height:80%;
+		width:80%;
+		text-indent:5px;
+		border-bottom-left-radius:5px;
+		border-top-left-radius:5px;
+		}
+	.danmu input[type='button']{
+		position:relative;
+		top:0px;
+		left:-5px;
+		margin:0;
+		padding:0;
+		height:95%;
+		width:90px;
+		background-color:#F60;
+		line-height:100%;
+		outline:none;
+		color:white;
+		font-size:14px;
+		}
+	 /*style E*/
+</style>
+
+</head>
+<body>
+<!--body S-->
+    <div class="wrap">
+        <embed src="MV/1.mp4" autoplay="autoplay"></embed>
+    </div>
+    <div class="box"></div>
+    <div class="danmu">
+        <input type="text" placeholder="请输入弹幕^_^" class="content"/>
+        <input type="button" value="发送" class="btn" />
+    </div>
+<script>
+	var oBox=document.querySelector(".box");
+	var oContent=document.querySelector(".content");
+	var oBtn=document.querySelector(".btn");
+	/*获得box的高度*/
+    var oBoxoffsetHeight=oBox.offsetHeight;
+	/*获得box的宽度*/
+	var oBoxoffsetWidth=oBox.offsetWidth;
+	oBtn.onclick=function(){
+		var value=oContent.value;
+		/*正则表达式*/
+		if(value==""){
+			alert("请输入弹幕");
+			oContent.value="";
+			return false;
+			}
+		createSpan(value);
+		oContent.value="";
+		}
+	function createSpan(msg){
+		var oSpan=document.createElement("span");
+		oSpan.style.backgroundColor="red";
+		oSpan.innerHTML=msg;
+		//alert(oBoxoffsetWidth+"+++"+oBoxoffsetHeight);
+		var top=Math.random()*400+50;/随机生成50到450的数/
+		oSpan.style.left=oBoxoffsetWidth-300+'px';
+		oSpan.style.top=oBoxoffsetHeight+100-top+'px';// -50~-450
+		//alert(oSpan.style.left+"   "+oSpan.style.top);
+		/*字体颜色*/
+		oSpan.style.color='white';
+		oBox.appendChild(oSpan);
+		//messageScroll.call(oSpan);
+		//_this=this;
+		//messageScroll(_this);
+		messageScroll.call(oSpan)
+		console.log(this+"++"+oSpan);
+		}
+	function messageScroll(oSpan){
+		//console.log("scroll"+this);
+		var timer=setInterval(function(oSpan){
+			console.log("set"+this+"=="+this.offsetLeft);
+			_this=this;
+			//console.log(this);
+			//alert(this)
+			_this.style.left=_this.offsetLeft - 1 + 'px';
+			//oSpan.style.left=oSpan.offsetLeft - 1 + 'px';
+			if(this.offsetLeft<100){
+				//alert(oSpan.offsetLeft);
+				this.parentNode.removeChild(this);
+				clearInterval(timer);
+				}
+			}.bind(this),1000/60);
+		}
+</script>
+<!--body E-->
+</body>
+</html>

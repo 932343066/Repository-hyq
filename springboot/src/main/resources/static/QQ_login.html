@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jimi_login</title>
+<style type="text/css">
+		/*jimi S*/
+		*{ margin:0px; text-decoration:none; font-size:10px;}
+		.j-jimi{ margin:auto; margin-top:100px; border:1px #CCCCCC solid; width:428px; height:327px;}
+		.j-jimi .j-top{ height:128px; background-color:#9071FF; 
+		                background-image: url(images/qq.png);
+						background-repeat:no-repeat;
+						background-position:left top; }
+		.j-jimi .j-top .j-close{ position:relative; top:0px; left:396px;}
+		.j-jimi .j-top .j-close:hover{ background-color:#F00;}
+		.j-jimi .j-top .j-smart{ position:relative; top:0px; left:332px;}
+		.j-jimi .j-top .j-shezhi{ position:relative; top:0px; left:263px;}
+		.j-jimi .j-button{  width:200px; margin:50px 140px 0px auto;}
+		.j-jimi .j-button .j-stuName{ width:200px; height:20px; border-top:none; border-left:none; border-right:none; outline:none;}
+		.j-jimi .j-button .j-stuPwd{ width:200px; height:20px; border-top:none; border-left:none; border-right:none; outline:none} 
+		.j-jimi .j-button .j-login{ width:218px; background-color:#1cc4fc; height:35px; color:white; font-size:14px; border-radius:7%;}
+		.j-jimi .j-button .j-autoLogin{ color:#CCC;}
+		input[type="checkbox"]:checked::before{
+							content: "\2713";
+							background-color: #0FF;
+							position: relative;
+							top: 0;
+							left: 0;
+							width:100%;
+							border: 1px solid  #CCC;
+							color:#e50232;
+							font-size: 12px;
+							font-weight: bold;}
+		.j-jimi .j-button .j-remeberPwd{ color:#CCC;}
+		.j-jimi .j-button a{ color: #CCC;}
+		.j-jimi .j-button a:hover{ color: #999;}
+		.j-jimi .j-button .j-regUser{ position:relative; top:-26px; left:-74px;}
+		.j-jimi .j-button .j-erWeiMa img{ position:relative; top:-14px; left:251px;}
+		.j-jimi .j-button .j-jh{position:relative; top:-246px; left:33px; width:200px;}
+		.j-jimi .j-button .j-jh .j-photo{ position:relative; top:8px; left:55px; }
+		.j-jimi .j-button .j-jh img{ border-radius:50%;}
+		/*jimi E*/
+</style>
+</head>
+<body>
+<!--jimi S-->
+<div class="j-jimi">
+	<div class="j-top">
+    <!--top S-->
+        <img src="images/close.png" class="j-close" alt="关闭" title="关闭" width="32px" height="32px" />
+        <img src="images/smart.png" class="j-smart" alt="最小化" title="最小化" width="32px" height="32px" />
+        <img src="images/shezhi.png" class="j-shezhi" alt="设置" title="设置" width="32px" height="32px" />
+    </div>
+    <!--top E-->
+    <div class="j-button">
+    <!--button S-->
+        <form action="" method="post">
+          <table>
+              <tr>
+                <td align="right"><img src="images/user.png" alt="用户名" title="用户名" width="20px" height="20px" class="j-user"></td>
+                <td align="right"><input type="text" name="j-stuName" class="j-stuName" placeholder="QQ号码/手机/邮箱" autocomplete="off" onfocus="if(value='QQ号码/手机/邮箱'){value=''}" onblur="if(value=''){value='QQ号码/手机/邮箱'}" /></td>
+              </tr>
+              <tr>
+                <td align="right"><img src="images/pwd.png" alt="密码" title="密码" width="20px" height="30px" class="j-pwd"></td>
+                <td align="right"><input type="password" name="j-stuPwd" class="j-stuPwd" placeholder="密码" autocomplete="off" /></td>
+              </tr>
+              <tr>
+                <td align="center" colspan="2">
+                   <input type="checkbox" name="" value="自动登录" class="j-autoLogin" id="j-autoLogin"><label for="j-autoLogin" class="j-autoLogin">自动登录</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <input type="checkbox" name="" value="记住密码" class="j-remeberPwd" id="j-remeberPwd"><label for="j-remeberPwd" class="j-remeberPwd">记住密码</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <a href="##" class="j-findPwd">找回密码</a>
+              </tr
+              ><tr>
+                <td align="center" colspan="2"><input type="submit" name="j-btn" value="登录" class="j-login"></td>
+              </tr>
+          </table>
+        </form>
+        <div class="j-reg">
+            <a href="##" class="j-regUser">注册账号</a>
+            <a href="##" class="j-erWeiMa"><img src="images/erweima.png" alt="二维码登录" title="二维码登录" width="30px" height="30px" /></a>
+        </div>
+        
+        <div class="j-jh">
+         <img src="images/1.jpg" class="j-photo" alt="用户" title="用户" width="60px" height="60px">
+        <a href="##">
+        <img src="images/jh.png" class="j-jh-j" alt="jh" width="40px" height="40px">
+        </a>
+        </div>
+    <!--button E-->
+    </div>
+</div>
+<!--jimi E-->
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	// 设置界面是否可以拖动
+	/*S*/
+	var setting={opacity:0.5,//透明度
+	             revert:false,//移动完后是否返回  true 不返回  false 返回
+				 containment:"parent"//活动的范围  父亲的大小
+		}
+	$(".j-jimi").draggable();
+	/*N*/
+	
+	// 点击× 关掉界面
+	/*S*/
+	$(".j-close").click(function(){
+		var a=confirm("确定关闭吗?")
+		if(a){
+			$(".j-jimi").remove();
+			}
+		})
+	// 关闭按钮  悬浮变红 失去变原来
+	$(".j-close").mouseover(function(){
+		$(".j-close").attr("src","images/closenew.png")
+		})
+	$(".j-close").mouseout(function(){
+		$(".j-close").attr("src","images/close.png")
+		})
+	/*N*/
+	
+	//user pwd框  获得焦点点亮企鹅和锁 失去焦点关闭灯和锁
+	/*S*/
+	$(".j-stuName").focus(function(){
+		$(".j-user").attr("src","images/usernew.png")
+		})
+	$(".j-stuName").blur(function(){
+		$(".j-user").attr("src","images/user.png")
+		})
+	$(".j-stuPwd").focus(function(){
+		$(".j-pwd").attr("src","images/pwdnew.png")
+		})
+	$(".j-stuPwd").blur(function(){
+		$(".j-pwd").attr("src","images/pwd.png")
+		})
+	/*N*/
+	
+	// 用户名密码框获得焦点地下线变天蓝色 失去焦点恢复原色
+	/*S*/
+	$(".j-jimi .j-button .j-stuName").focus(function(){
+		$(".j-jimi .j-button .j-stuName").css("border-bottom","1px #00FFFF solid");
+		})
+	$(".j-jimi .j-button .j-stuName").blur(function(){
+		$(".j-jimi .j-button .j-stuName").css("border-bottom","1px #EEEEEE solid");
+		})
+	$(".j-jimi .j-button .j-stuPwd").focus(function(){
+		$(".j-jimi .j-button .j-stuPwd").css("border-bottom","1px #00FFFF solid");
+		})
+	$(".j-jimi .j-button .j-stuPwd").blur(function(){
+		$(".j-jimi .j-button .j-stuPwd").css("border-bottom","1px #EEEEEE solid");
+		})
+	/*E*/
+		
+	// 鼠标移至头像上面 实现动画效果 添加用户向右滑出  点击头像 隐藏 向左滑入
+	/*S*/
+	$(".j-photo").mouseover(function(){
+		$(".j-jimi .j-button .j-jh .j-jh-j").animate({"margin-left":"80px"})
+		})
+    $(".j-photo").click(function(){
+		$(".j-jimi .j-button .j-jh .j-jh-j").animate({"margin-left":"0px"})
+		})
+	/*E*/
+	})
+</script>
+</body>
+</html>

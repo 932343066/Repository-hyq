@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xrom.springboot.start.mapper.HistoryMapper">
+	<insert id="insertHistory">
+		insert into History(id, sendUser, receiveUser, time, content) values(#{id}, #{sendUser}, #{receiveUser}, #{time}, #{content})
+	</insert>
+	<select id="selectHistory" resultType="com.xrom.springboot.start.model.HistoryModel">
+		select
+		    h.id id,
+		    h.sendUser sendUser,
+		    h.receiveUser receiveUser,
+		    h.time time,
+			h.content content,
+			u.img img
+		from History h
+		inner join User u on h.sendUser = u.username
+		where (h.sendUser = #{username} and h.receiveUser = #{usernameOther})
+			or (h.receiveUser = #{username} and h.sendUser = #{usernameOther})
+		order by h.time asc
+	</select>
+</mapper>

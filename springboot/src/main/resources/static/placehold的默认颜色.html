@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>placehold的默认颜色</title>
+<style type="text/css">
+	body{ 
+		margin:0;
+		padding:0;
+		}
+	/*input start*/
+	input::placeholder{
+		color:red;
+		font-family:"华文楷体";
+		}
+	input:focus{
+		background-image:url(images/user.png);
+		background-repeat:no-repeat; 
+		background-position:right center;
+		}
+	input{
+		text-indent:10px; 
+		display:block; 
+		margin:10px auto;
+		width:200px; 
+		height:30px; 
+		border:none; 
+		border-bottom:1px black solid;
+		outline:none; 
+		background-image:url(images/fdj.png); 
+		background-repeat:no-repeat; 
+		background-position:right center;
+		}
+	/*input end*/	
+</style>
+</head>
+
+<body>
+	<!--input start-->
+	<input type="text" placeholder="我是默认样式" class="wrap" />
+	<!--input end-->
+    
+    <script type="text/javascript">
+		/*原生js start*/
+		var oInput=document.querySelector(".wrap");
+		oInput.onfocus=function(){
+			oInput.style.borderBottom="1px solid skyblue";
+			}
+		oInput.onblur=function(){
+			oInput.style.borderBottom="1px solid black";
+			}
+		/*原生js end*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+    	<!--设置字符编码格式 中文编码(gbk gb2312) 国际编码(utf-8) 2005前使用的是gbk 之后使用的是utf-8-->
+    	<mata http-equiv="content-Type" content="text/html" charset="utf-8" />
+        <mata name="keywords" content="关键字,关键词" />
+       	<mata name="description" content="" />
+        <title>typeof和instanceof</title>
+        <style type="text/css">
+        	body{ margin:0; padding:0;}
+        </style>
+    </head>
+    <body>
+    	<script type="text/javascript">
+								/*instanceof*/
+			/*1、判断Object是否在window的原型链上 2、判断前者是不是后者的实例对象*/
+        	/*1、*/window instanceof Object?alert("window instanceof Object 为true"):alert("window instanceof Object 为false"); //true 
+			
+			/*2、*/var a=new Array();
+			a instanceof Array?alert("a instanceof Array为true"):alert("a instanceof Array为false");
+			//true 
+			var b=new String();
+			b instanceof String?alert("b instanceof String 为true"):alert("b instanceof String 为false");
+			//true 
+			var c=new Boolean();
+			c instanceof Boolean?alert("c instanceof Boolean 为true"):alert("c instanceof Boolean 为false");
+			//true 
+			function d(){};
+			d instanceof Function?alert("d instanceof Function 为true"):alert("d instanceof Function 为false");
+			//true 
+			d instanceof Object?alert("d instanceof Object 为true"):alert("d instanceof Object 为false");
+			//true 
+			Object instanceof d?alert("Object instanceof d 为true"):alert("Object instanceof d 为false");
+			//true
+			/*结论
+				Function既是Object的实例对象 Object也是Function的实例对象*/ 
+
+								/*type of*/
+				/*基本数据类型 Boolean Number Undefined Null
+				  引用数据类型 Object Function Array
+				  最厉害的数据类型 String*/
+			/*字符串*/
+			var arr="";
+				alert(typeof arr =="string");//true 
+			/*数字*/
+			var arr1=2;
+				alert(typeof arr1=="number");//true 
+			/*boolean类型*/
+			var arr2=true;
+				alert(typeof arr2=="boolean");//true 
+			/*未定义或者未初始化类型*/
+			var arr3; /*或者直接不var arr4*/
+				alert(typeof arr3=="undefined");//true 
+			/*空类型*/
+			var arr4=null;
+				alert(typeof arr4 =="object");//true 
+			/*数组类型*/
+			var arr5=[1,1];
+				alert(typeof arr5=="object");//true 
+            /*函数类型*/		   
+		    function arr6(){};
+		   		alert(typeof arr6=="function");//true 
+        </script>
+    </body>
+</html>

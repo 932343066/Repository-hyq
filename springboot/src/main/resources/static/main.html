@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jimi机器人-首页</title>
+<style type="text/css">
+           /*style S*/
+           *{ 
+		    margin:0px; text-decoration:none; list-style:none;}
+		   .j-jimi{ 
+		     width:279px; height:684px; border:1px  #999999 solid; 
+		   	 position:absolute; left:500px;
+			 background-image: url(images/1033.jpg); 
+			 background-repeat:no-repeat; 
+			 background-size:100% 100%;
+			 -moz-background-size:100% 100%;
+		   }
+           .j-jimi .j-top{ 
+		     height:108px;
+		   }
+		   .j-jimi .j-top .j-img .j-toux{ 
+		     position:relative; 
+			 top:44px; left:14px; 
+			 border-radius:50%;
+		   }
+		   .j-jimi .j-center{ 
+		     height:29px; 
+			 outline:none;
+		   }
+           .j-jimi .j-center input{ 
+		     height:25px; 
+		   	 border:none;
+			 width:279px;
+		     text-indent:25px;
+		     background-repeat:no-repeat !important;
+			 background-image:url(images/fdj.png) !important;
+			 background-position:left 1px;
+			 background: #CCC;
+			 opacity:0.5;
+			 outline:none;	
+		   }
+		   .j-jimi .j-button{ 
+		     height:507px;
+		   }
+		   .j-jimi .j-button ul li{ 
+		     float:left; 
+			 margin-top:10px; 
+			 color: #666;
+		   }
+		   .j-jimi .j-button ul li:hover{ 
+		     color:#000; 
+			 cursor:pointer;
+		   }
+		   .j-jimi .j-button ul li:nth-child(1){ 
+		     margin-left:-21px;
+		   }
+		   .j-jimi .j-button ul li:nth-child(2){ 
+		     margin-left:58px;
+		   }
+		   .j-jimi .j-button ul li:nth-child(3){
+			 margin-left:56px;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend{ 
+		     clear:both; 
+			 height:475px; 
+			 margin-top:20px;
+			 display:none; 
+			 overflow:auto;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend::-webkit-scrollbar{ 
+		     display:none;
+		   }
+		   .j-jimi .j-button ul li.choose{ 
+		     border-bottom:2px #CC9900 solid;
+			  padding-bottom:7px; 
+			  color: #FC6;
+		   }
+           .j-jimi .j-button .j-tables .j-contend.one{ 
+		     display:block;
+		   }
+           .j-jimi .j-button .j-tables .j-contend .j-user{ 
+		     height:60px;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend .j-user .bg{ 
+		     background-color:#666;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend .j-user img{ 
+		     border-radius:50%;
+			 margin:10px auto 0px 10px;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend .j-user .j-list{ 
+		     position:relative;
+			 top:-40px; left:55px;
+			 width:222px
+			 height:40px;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend .j-user .j-list .j-sendUname{ 
+		   	 font-size:14px; height:19px;
+			 white-space:nowrap; 
+			 overflow:hidden;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend .j-user .j-list .j-sendUname a{ 
+		   	 color:black; 
+			 cursor:pointer;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend .j-user .j-list .j-sendUname .j-time{ 				
+		   	 position:relative; 
+			 left:130px; 
+			 top:-18px; 
+			 font-size:10px;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend .j-user .j-list .j-note{ 
+		     font-size:12px;
+			 height:17px;
+			 color: #999;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend ul li{ 
+		     border:1px red solid;
+			 padding:2px 20px 2px 20px;
+			 font-size:16px;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend ul li.choose2{ 
+		     background-color:#E4DADC;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend ul li{
+			 margin-top:4px;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend ul li:nth-child(1){ 
+		     margin-left:-36px;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend ul li:nth-child(2){ 
+		     margin-left:-1px;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend ul li:hover{ 
+		     color:black;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend .j-tables2 .j-contend2{ 
+		   	 position:relative;
+			 top:36px;
+			 left:0px;
+			 height:427px;
+			 width:277px;
+			 border:1px red solid;
+			 display:none;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend .j-tables2 .j-contend2.two{ 
+		   	 display:block;
+		   }	
+		   .j-jimi .j-button .j-tables .j-contend .j-tables2 .j-contend2 .j-user2{ 
+			 position:relative; 
+			 top:2px; 
+			 left:-1px; 
+			 height:33px; 
+			 width:277px; 
+			 border:1px red solid; 
+			 margin-bottom:5px;
+	  	   }
+		   .j-jimi .j-button .j-tables .j-contend .j-tables2 .j-contend2 .j-user2 img{  
+		   	 margin-left:0px;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend .j-tables2 .j-contend2 .j-user2:first-child img{ 
+		     margin-left:-149px;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend .j-tables2 .j-contend2 .j-user2.bg2{
+			 background-color:#666;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend .j-tables2 .j-contend2 .j-user2 .j-list2{
+			 position:relative; 
+			 top:-34px; 
+			 left:40px; 
+			 width:236px; 
+			 height:26px; 
+			 padding:5px 0px 2px 0px; 
+			 font-size:16px; 
+			 color:black;
+			 border:1px red solid;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend .j-tables2 .j-contend2 .j-user2 .j-goodFriends{ 
+		     position:relative; top:-28px; left:-1px; border:1px red solid; height:38px; width:277px; vertical-align:middle; display:none;
+		   }
+		   .j-jimi .j-button .j-tables .j-contend .j-tables2 .j-contend2 .j-user2  .j-goodFriends img{ border-radius:50%; position:relative; top:0px; left:150px;}
+		   .j-jimi .j-button .j-tables .j-contend .j-tables2 .j-contend2 .j-user2  .j-goodFriends div{ position:relative; top:-39px; left:52px; border:1px red solid; height:22px; width:224px; padding:8px 0px 8px 0px; }
+		   /*style E*/
+</style>
+</head>
+<body>
+<!--body S-->
+<div class="j-jimi">
+		<div class="j-top">
+        	<div class="j-img">
+            	<img src="images/1.jpg" class="j-toux" alt="何业秋" title="何业秋" width="50px" height="50px">
+            </div>
+        </div>
+        <div class="j-center" contenteditable="true" >
+        	<input type="text" class="j-search" name="j-search" placeholder="搜索"/>
+            <!--onfocus="this.placeholder=''" onblur="this.placeholder='搜索'"-->
+        </div>
+        <div class="j-button">
+        	<ul class="j-ul">
+            	<li class="choose">消息</li>
+                <li>联系人</li>
+                <li>动态</li>
+            </ul>
+            <br />
+            <div class="j-tables">
+            	<div class="j-contend one">
+	            	<c:if test="${empty list}">
+	            		暂无消息
+	            	</c:if>
+	            	<c:if test="${!empty list}">
+	            		<c:forEach var="message" items="${list}">
+		                	<div class="j-user">
+		                        <img src="images/${message.id}.jpg" title="${message.sendUname}" width="40px" height="40px" />
+		                        <div class="j-list">
+		                            <div class="j-sendUname">
+		                            	<a>${message.sendUname}</a>
+		                            	<div class="j-time">${message.postTime }</div> 
+		                            </div>
+		                            <div class="j-note">${message.note }</div>
+		                        </div>
+		                    </div>
+                   	 	</c:forEach>
+                	</c:if>
+                </div>
+                <div class="j-contend" style="color: #333;font-size: 16px;">
+                <!--display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2; 两行后用...代替-->
+                  	<ul class="j-ul2">
+                    	<li class="choose2">好友</li>
+                        <li>群聊</li>
+                    </ul>
+                    <div class="j-tables2">
+                    	<div class="j-contend2 two">
+                        	<!--<div id="ss">
+                               <h3>second 1</h3>
+                               <div>
+                               <p>second 1  没有你或许变得更重要  眼泪一直对我很重要</p>
+                               <div id="ll">fjklfslkf</div>
+                               </div>
+                               <h3>second 2</h3>
+                               <div>
+                               <p>second 2 困住寂寞  懒得不出口</p>
+                               </div>
+                               <h3>second 3</h3>
+                               <div>
+                               <p>second 3 死掉了太多的温柔</p>
+                               </div>
+                               <h3>second 4</h3>
+                               <div>
+                               <p>second 4 我一个人抱着自己睡觉</p>
+                               </div>
+                            </div>-->
+                        	<div class="j-user2">
+                            	<img src="images/right.png" class="j-img2" />
+                                <div class="j-list2">
+                                	新朋友2/2
+                                </div>
+                                <div class="j-goodFriends">
+                                    <img src="images/3.jpg" title="" width="38px" height="38px" />
+                                    <div>哈哈</div>
+                                </div>
+                            </div>
+                            <div class="j-user2">
+                            	<img src="images/right.png" />
+                                <div class="j-list2">
+                                	我的设备
+                                </div>
+                                <div class="j-goodFriends">
+                                    <img src="images/3.jpg" title="" width="38px" height="38px" />
+                                    <div>哈哈</div>
+                                </div>
+                            </div>
+                            <!--<div class="j-user2">
+                            	<img src="images/right.png" />
+                                <div class="j-list2">
+                                	我的好友
+                                </div>
+                            </div>
+                            <div class="j-user2">
+                            	<img src="images/right.png" />
+                                <div class="j-list2">
+                                	我的联系人
+                                </div>
+                            </div>-->
+                        </div>
+                        <div class="j-contend2">哈哈</div>
+                    </div>                      
+                </div>
+                <div class="j-contend" contextmenu="">第三面第三面第三面第三面第三面第三面第三面第三面第三面第三面第三面第三面第三面第三面第三面第三三面第三面</div>
+            </div>
+        </div>
+</div>
+<link rel="stylesheet" href="UI/themes/default/easyui.css">
+<link rel="stylesheet" href="UI/themes/icon.css">
+<script type="text/javascript" src="Scripts/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="UI/jquery.easyui.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="UI/locale/easyui-lang-zh_CN.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript" src="js/jq.snow.js"></script>
+<script type="text/javascript">
+$(function(){
+	/*javascript E*/
+	
+	//雪花
+	/*defaults		= {
+							minSize		: 10,		//雪花的最小尺寸
+							maxSize		: 20,		//雪花的最大尺寸
+							newOn		: 100,		//雪花出现的频率
+							flakeColor	: "red"	//懒人建站 www.51xuediannao.com   整理
+								},
+	$("body").css("background-color"," #000").snow(defaults);*/
+	
+	// 打开对话框
+	$(".j-jimi .j-button .j-tables .j-contend .j-user .j-list .j-sendUname a").click(function(){
+		var value=$(this).text();
+		window.location.href="MessageServlet?opt=chat&name="+value;
+	})
+	
+	/**/
+	var setting={opacity:0.5,//透明度
+	             revert:false,//移动完后是否返回  true 不返回  false 返回
+				 containment:"parent"//活动的范围  父亲的大小
+		}
+	$(".j-jimi").draggable();
+	
+	// li 点击显示 变色 其他隐藏 恢复 消息-联系人-动态
+	/*S*/
+	$(".j-jimi .j-button ul:first li").click(function(){
+		$(".j-jimi .j-button ul:first li").eq($(this).index()).addClass("choose").siblings().removeClass("choose");
+		$(".j-jimi .j-button .j-tables .j-contend").eq($(this).index()).addClass("one").siblings().removeClass("one");
+		})
+	/*E*/
+	
+	// 鼠标点击li 变色 显示  其他恢复 隐藏  好友-群聊
+	/*S*/
+	$(".j-jimi .j-button .j-tables .j-contend ul:last li").click(function(){
+		$(".j-jimi .j-button .j-tables .j-contend ul li").eq($(this).index()).addClass("choose2").siblings().removeClass("choose2");
+		$(".j-jimi .j-button .j-tables .j-contend .j-tables2 .j-contend2").eq($(this).index()).addClass("two").siblings().removeClass("two");
+		})
+	
+	// 鼠标放到一行上面 一行变色 其他恢复原色  消息内容
+	/*S*/	 
+	$(".j-jimi .j-button .j-tables .j-contend .j-user").mouseover(function(){
+		$(this).addClass("bg").siblings().removeClass("bg");
+	})
+	/*E*/
+	
+	// 鼠标放到一行上面 一行变色 其他恢复原色 划出全部恢复 联系人 好友
+	/*S*/
+	$(".j-jimi .j-button .j-tables .j-contend .j-tables2 .j-contend2 .j-user2").mouseover(function(){
+		$(this).addClass("bg2").siblings().removeClass("bg2");
+	})
+	$(".j-jimi .j-button .j-tables .j-contend .j-tables2 .j-contend2 .j-user2").mouseout(function(){
+		$(this).removeClass("bg2")
+	})
+	/*E*/
+	
+	// 菜单列表 打开关闭 联系人 好友
+	/*S*/
+	$(".j-jimi .j-button .j-tables .j-contend .j-tables2 .j-contend2 .j-user2").click(function(){
+		if($(this).find(".j-goodFriends").is(":hidden")){
+			$(this).find(".j-goodFriends").slideDown(200);
+			$(this).find(".j-img2:first").attr("src","images/bottom.png");
+		}
+		else{
+			$(this).find(".j-goodFriends").slideUp(200);
+			$(this).find(".j-img2:first").attr("src","images/right.png");
+		}
+	})
+	/*E*/
+	
+})
+	/*javascript S*/
+</script>
+<!--body E-->
+</body>
+</html>

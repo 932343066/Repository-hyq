@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f89bdbf8-e898-4c0e-b8bd-7019d3b51f6a" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Repository-hyq" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/xrom/springboot/start/controller/HistoryController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/xrom/springboot/start/controller/LoginController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/xrom/springboot/start/model/HistoryModel.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/HistoryMapper.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mapper/config/sqlMapConfig.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/static/index.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/static/login.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/static/video.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\do\responbility" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../tool/mavne/apache-maven-3.3.9" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="F:\study\tool\mavne\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2BWizt0iSFV5oqTCfUHOEkj57oR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelOrder2": "2",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RequestMappingsPanelWidth2": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ToolWindowDebug.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "F:/study/project/SpringbootService/SpringbootCode/code/springboot/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "spring.configuration.checksum": "d164d99c46d45be6b1e7585ff7ea10e7",
+    "sql.codeStylePanel.last.previewDialect": "MySQL"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\study\特别重要的文档\SpringBoot微服务架构应用\SpringBoot微服务架构应用-资源\项目代码\springboot\src\main\resources\static\MV" />
+      <recent name="F:\study\特别重要的文档\SpringBoot微服务架构应用\SpringBoot微服务架构应用-资源\项目代码\springboot\src\main\resources\static\images" />
+      <recent name="F:\study\特别重要的文档\SpringBoot微服务架构应用\SpringBoot微服务架构应用-资源\项目代码\springboot\src\main\resources\static" />
+      <recent name="F:\study\特别重要的文档\SpringBoot微服务架构应用\SpringBoot微服务架构应用-资源\项目代码\springboot\src\main\resources\mapper" />
+      <recent name="F:\study\特别重要的文档\SpringBoot微服务架构应用\SpringBoot微服务架构应用-资源\项目代码\springboot\src\main\resources\static\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\study\特别重要的文档\SpringBoot微服务架构应用\SpringBoot微服务架构应用-资源\项目代码\springboot\src\main\resources\static\MV" />
+      <recent name="F:\study\特别重要的文档\SpringBoot微服务架构应用\SpringBoot微服务架构应用-资源\项目代码\springboot\src\main\resources\mapper" />
+      <recent name="F:\study\特别重要的文档\SpringBoot微服务架构应用\SpringBoot微服务架构应用-资源\项目代码\springboot\src\main\resources\static" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xrom.springboot.start.model" />
+      <recent name="com.xrom.springboot.start.controller" />
+      <recent name="com.xrom.springboot.start.service.impl" />
+      <recent name="com.xrom.springboot.start.service" />
+      <recent name="com.xrom.springboot.start.mapper" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install -e -U" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MySpringBootApplication">
+    <configuration name="PersonConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xrom.springboot.start.config.PersonConfig" />
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xrom.springboot.start.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySpringBootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xrom.springboot.start.MySpringBootApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xrom.springboot.start.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.MySpringBootApplication" />
+        <item itemvalue="Application.PersonConfig" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\ASUS\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f89bdbf8-e898-4c0e-b8bd-7019d3b51f6a" name="Changes" comment="" />
+      <created>1657028509378</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657028509378</updated>
+      <workItem from="1657028510844" duration="1993000" />
+      <workItem from="1657107852991" duration="2256000" />
+      <workItem from="1657263864477" duration="2521000" />
+      <workItem from="1657285280504" duration="2631000" />
+      <workItem from="1657287992136" duration="326000" />
+      <workItem from="1657288353734" duration="602000" />
+      <workItem from="1657334381113" duration="315000" />
+      <workItem from="1657334730388" duration="3937000" />
+      <workItem from="1657372924750" duration="2574000" />
+      <workItem from="1657422856821" duration="1023000" />
+      <workItem from="1657445415761" duration="3505000" />
+      <workItem from="1657531692549" duration="743000" />
+      <workItem from="1673090600404" duration="739000" />
+      <workItem from="1673145912577" duration="945000" />
+      <workItem from="1673147067672" duration="272000" />
+      <workItem from="1673147371250" duration="80000" />
+      <workItem from="1673147616924" duration="187000" />
+      <workItem from="1673148083044" duration="79000" />
+      <workItem from="1673148177860" duration="29000" />
+      <workItem from="1673148279989" duration="106000" />
+      <workItem from="1673148541668" duration="28040000" />
+      <workItem from="1673180471429" duration="4886000" />
+      <workItem from="1673234728733" duration="36739000" />
+      <workItem from="1673325906554" duration="27408000" />
+      <workItem from="1673406409077" duration="1139000" />
+      <workItem from="1673423228493" duration="728000" />
+      <workItem from="1673425358157" duration="921000" />
+      <workItem from="1673430520195" duration="2735000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xrom/springboot/start/annotion/LogAop.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xrom/springboot/start/annotion/AnnotionAop.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xrom/springboot/start/service/impl/PersonServiceImpl.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xrom/springboot/start/service/impl/PersonServiceImpl.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/resources/static/login.jsp</url>
+          <line>211</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xrom/springboot/start/controller/LoginController.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/resources/static/js/tools.js</url>
+          <line>53</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

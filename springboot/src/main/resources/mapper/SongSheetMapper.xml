@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xrom.springboot.start.mapper.SongSheetMapper">
+    <select id="findAllSongSheet" resultType="com.xrom.springboot.start.domain.SongSheet">
+        select * from SongSheet
+    </select>
+</mapper>

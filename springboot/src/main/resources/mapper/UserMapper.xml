@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xrom.springboot.start.mapper.UserMapper">
+	<insert id="register">
+		insert into User(id, username, pwd, isDelete) values (#{id}, #{username}, #{pwd}, #{isDelete})
+	</insert>
+	<select id="login" resultType="com.xrom.springboot.start.domain.User">
+		select * from User WHERE ISDELETE = 0 and username = #{username} and pwd = #{pwd}
+	</select>
+	<select id="checkUsername" resultType="com.xrom.springboot.start.domain.User">
+		select * from User WHERE ISDELETE = 0 and username = #{username}
+	</select>
+	<select id="selectUserNameOther" resultType="java.lang.String">
+		select username from User where ISDELETE = 0 and username != #{username} and state = 1
+	</select>
+</mapper>

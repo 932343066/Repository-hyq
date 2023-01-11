@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+    	<mata http-equiv="Content-Type" content="text/html" charset="utf-8" />
+        <mata name="keywords" content="关键词,关键字" />
+        <mata name="description" content="" />
+        <title>function的原型</title>
+        <style type="text/css">
+        	body{ margin:0; padding:0;}
+        </style>
+    </head>
+    <body>
+    	<script type="text/javascript">
+			// 严格模式 'use strict'
+			/*a = 1;
+			console.log(a);
+			
+			function f(){
+				console.log(this);
+				}
+			f();*/
+			function A(){};
+			var a=new A();
+			A.prototype.name='哈哈';
+			console.log(A.prototype);
+			console.log(A.prototype==Object.getPrototypeOf(a));//true
+			console.log(A.prototype.isPrototypeOf(a));//true
+			console.log('name' in A);//true
+			
+        </script>
+    </body>
+</html>
