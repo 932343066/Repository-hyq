@@ -1,6 +1,5 @@
 package com.xrom.springboot.start.mapper;
 
-import com.xrom.springboot.start.domain.SongSheet;
 import com.xrom.springboot.start.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 

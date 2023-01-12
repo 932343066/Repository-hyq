@@ -21,4 +21,5 @@ public class HistoryModel implements Serializable{
 	private String shortTime;
 	private String content;
 	private String img;
+	private int state;
 }

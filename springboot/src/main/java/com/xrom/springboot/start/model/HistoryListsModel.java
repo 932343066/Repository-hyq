@@ -1,6 +1,5 @@
 package com.xrom.springboot.start.model;
 
-import com.xrom.springboot.start.domain.History;
 import lombok.Data;
 
 import java.io.Serializable;
