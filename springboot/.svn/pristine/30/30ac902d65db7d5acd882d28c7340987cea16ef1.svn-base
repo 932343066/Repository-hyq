@@ -1,0 +1,54 @@
+package com.xrom.springboot.start.service.impl;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Service;
+
+import com.xrom.springboot.start.domain.Person;
+import com.xrom.springboot.start.mapper.PersonMapper;
+import com.xrom.springboot.start.service.PersonService;
+@Service
+public class PersonServiceImpl implements PersonService {
+	
+	@Autowired
+	private PersonMapper personMapper;
+	
+	@Autowired
+	private RedisTemplate<String, String> redisTemplate;
+	/*@Autowired
+	private JedisCluster jedisCluster;*/
+	
+	@CachePut(value="findAll")
+	public List<Person> findAllUser() {
+		//redisTemplate.opsForValue().set("name", "张三");
+		System.out.println(redisTemplate.opsForValue().get("name"));
+		//String hget = jedis.hget("name", "1");
+		//System.out.println("测试缓存，第二次查询不走方法!!!  ----   " + hget);
+		List<Person> list = personMapper.findAll();
+		return list;
+	}
+
+
+	@Override
+	public Map<String, Object> redisMap() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	//@Override
+	//public Map<String, Object> redisMap() {
+		//jedisCluster.set("user", "张三丰");
+		//设置完毕，获取之
+		//String value = jedisCluster.get("user");
+		//Map<String, Object> maps = new HashMap<String, Object>();
+		//maps.put("redis", value);
+		//return maps;
+	//}
+
+}

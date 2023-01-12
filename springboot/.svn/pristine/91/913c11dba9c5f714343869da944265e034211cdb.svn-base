@@ -1,0 +1,45 @@
+package cn.itcast.start.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import cn.itcast.start.domain.Person;
+import cn.itcast.start.service.PersonService;
+
+@RestController
+public class PersonCtroller {
+	
+	@Autowired
+	private PersonService personService;
+
+	@RequestMapping("info")
+	public Person hello(){
+		
+		Person person = new Person();
+		
+		person.setName("张三丰");
+		person.setAge(23);
+		
+		return person;
+	}
+	
+	@RequestMapping("list")
+	public List<Person> list(){
+		List<Person> list = personService.findAllUser();
+		return list;
+	}
+	
+	/**
+	 * 需求：操作REDIS集群缓存
+	 */
+	@RequestMapping("redis")
+	public String redisMap(Model model){
+		//Map<String, Object> maps = userService.redisMap();
+		model.addAttribute("hello", "张三丰");
+		return null;
+	}
+}

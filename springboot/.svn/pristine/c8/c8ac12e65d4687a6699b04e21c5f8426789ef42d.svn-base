@@ -1,0 +1,82 @@
+package com.xrom.springboot.start.domain;
+
+import java.io.Serializable;
+
+/**
+ * 
+* @des
+* @author heyq  
+* @date 2021年5月26日  
+* @version 1.0
+ */
+public class Person implements Serializable{
+	
+	
+	/**  
+	* @des
+	* @author heyq  
+	* @date 2021年5月26日  
+	* @version 1.0  
+	*/  
+	private static final long serialVersionUID = 1L;
+	
+	
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	
+	public Person() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public Person(String id, String name, int age, Integer isDelete) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.isDelete = isDelete;
+	}
+
+
+	private String id;
+	private String name;
+	private int age;
+	private Integer isDelete;
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public Integer getIsDelete() {
+		return isDelete;
+	}
+	public void setIsDelete(Integer isDelete) {
+		this.isDelete = isDelete;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", name=" + name + ", age=" + age + ", isDelete=" + isDelete + ", getId()="
+				+ getId() + ", getName()=" + getName() + ", getAge()=" + getAge() + ", getIsDelete()=" + getIsDelete()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
+}
