@@ -1,6 +1,4 @@
-﻿<%@ page language="java" import="java.util.*, java.net.*" pageEncoding="utf-8"%>
-2 <%request.setCharacterEncoding("utf-8");%>
-3 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 	<link href="1.ico" type="image/x-icon" rel="shortcut icon" />

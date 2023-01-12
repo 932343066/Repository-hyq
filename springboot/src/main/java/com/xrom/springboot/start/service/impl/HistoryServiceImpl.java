@@ -24,4 +24,19 @@ public class HistoryServiceImpl implements HistoryService {
     public int insertHistory(History history) {
         return historyMapper.insertHistory(history);
     }
+
+    @Override
+    public void updateHistoryState(String sendUser, String receiveUser) {
+        historyMapper.updateHistoryState(sendUser, receiveUser);
+    }
+
+    @Override
+    public List<HistoryModel> selectNewHistory(String sendUser, String receiveUser) {
+        return historyMapper.selectNewHistory(sendUser, receiveUser);
+    }
+
+    @Override
+    public List<HistoryModel> selectById(String id) {
+        return historyMapper.selectById(id);
+    }
 }

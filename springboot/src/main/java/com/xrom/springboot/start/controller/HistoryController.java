@@ -13,13 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @RestController
 public class HistoryController {
@@ -35,13 +32,19 @@ public class HistoryController {
      * @return
 	 */
 	@RequestMapping(value = "SelectHistory", method = RequestMethod.POST)
-	public TeeJson selectHistory(HttpServletRequest request){
+	public TeeJson selectHistory(HttpServletRequest request, @RequestParam("type") String type){
 		TeeJson json = new TeeJson();
 		try {
 			String sendUser = request.getSession().getAttribute("username").toString();
 			String receiveUser = userService.selectUserNameOther(sendUser);
+			List<HistoryModel> lists = new ArrayList<>();
 			// 查询发送人是username 接收人是usernameOther的数据
-			List<HistoryModel> lists = historyService.selectHistory(sendUser, receiveUser);
+			if ("1".equals(type)) {
+				lists = historyService.selectHistory(sendUser, receiveUser);
+			} else {
+				lists = historyService.selectNewHistory(sendUser, receiveUser);
+			}
+			historyService.updateHistoryState(sendUser, receiveUser);
             lists.stream().forEach(i -> {
                 i.setShortTime(i.getTime().substring(0, i.getTime().length() - 2));
             });
@@ -54,6 +57,7 @@ public class HistoryController {
 		} catch (Exception e) {
 			json.setRtState(false);
 			json.setRtMsg("selectHistory {},数据异常");
+			e.printStackTrace();
 		}
 		return json;
 	}
@@ -75,7 +79,12 @@ public class HistoryController {
 			history.setTime(new Date());
 			history.setContent(content);
 			int count = historyService.insertHistory(history);
+			List<HistoryModel> hiss = historyService.selectById(history.getId());
+			hiss.stream().forEach(i -> {
+				i.setShortTime(i.getTime().substring(0, i.getTime().length() - 2));
+			});
 			if (count > 0) {
+				json.setRtData(hiss);
 				json.setRtState(true);
 			} else {
 				json.setRtState(false);
@@ -84,6 +93,33 @@ public class HistoryController {
 		} catch (Exception e) {
 			json.setRtState(false);
 			json.setRtMsg("selectHistory {},数据异常");
+			e.printStackTrace();
+		}
+		return json;
+	}
+
+	/**
+	 * 查询新消息
+	 * @return
+	 */
+	@RequestMapping(value = "SelectNewHistory", method = RequestMethod.POST)
+	public TeeJson selectNewHistory(HttpServletRequest request){
+		TeeJson json = new TeeJson();
+		try {
+			String sendUser = request.getSession().getAttribute("username").toString();
+			String receiveUser = userService.selectUserNameOther(sendUser);
+			// 查询发送人是username 接收人是usernameOther的数据
+			List<HistoryModel> lists = historyService.selectNewHistory(sendUser, receiveUser);
+			if (lists.size() > 0) {
+				// 有新消息
+				json.setRtState(true);
+			} else {
+				json.setRtState(false);
+			}
+			json.setRtMsg("查询成功");
+		} catch (Exception e) {
+			json.setRtState(false);
+			json.setRtMsg("selectNewHistory {},数据异常");
 			e.printStackTrace();
 		}
 		return json;

@@ -4,6 +4,9 @@
 	<insert id="insertHistory">
 		insert into History(id, sendUser, receiveUser, time, content) values(#{id}, #{sendUser}, #{receiveUser}, #{time}, #{content})
 	</insert>
+	<update id="updateHistoryState">
+		update History set state = 1 where sendUser = #{receiveUser} and receiveUser = #{sendUser} and state = 0
+	</update>
 	<select id="selectHistory" resultType="com.xrom.springboot.start.model.HistoryModel">
 		select
 		    h.id id,
@@ -17,5 +20,22 @@
 		where (h.sendUser = #{username} and h.receiveUser = #{usernameOther})
 			or (h.receiveUser = #{username} and h.sendUser = #{usernameOther})
 		order by h.time asc
+	</select>
+	<select id="selectNewHistory" resultType="com.xrom.springboot.start.model.HistoryModel">
+		select
+			h.id id,
+		    h.sendUser sendUser,
+		    h.receiveUser receiveUser,
+		    h.time time,
+			h.content content,
+			u.img img
+		from History h
+		inner join User u on h.sendUser = u.username
+		where h.sendUser = #{receiveUser} and h.receiveUser = #{sendUser}
+		and h.state = 0
+		order by h.time asc
+	</select>
+	<select id="selectById" resultType="com.xrom.springboot.start.model.HistoryModel">
+		select * from History where id = #{id}
 	</select>
 </mapper>

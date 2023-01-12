@@ -20,4 +20,5 @@ public class History implements Serializable{
 	private String receiveUser;
 	private Date time;
 	private String content;
+	private int state;
 }

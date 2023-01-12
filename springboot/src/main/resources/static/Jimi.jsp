@@ -27,6 +27,100 @@
                 background:url(images/accompany.gif) no-repeat 100%/cover;
                 height: 675px;
             }
+            a {
+                position: relative;
+                display: inline-block;
+                padding: 10px 20px;
+                color: #03e9f4;
+                font-size: 16px;
+                text-decoration: none;
+                text-transform: uppercase;
+                overflow: hidden;
+                transition: .5s;
+                margin-top: 40px;
+                letter-spacing: 4px
+            }
+
+            a:hover {
+                background: #03e9f4;
+                color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+            }
+
+            a span {
+                position: absolute;
+                display: block;
+            }
+
+            a span:nth-child(1) {
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(90deg, transparent, #03e9f4);
+                animation: btn-anim1 1s linear infinite;
+            }
+
+            @keyframes btn-anim1 {
+                0% {
+                    left: -100%;
+                }
+                50%,100% {
+                    left: 100%;
+                }
+            }
+
+            a span:nth-child(2) {
+                top: -100%;
+                right: 0;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(180deg, transparent, #03e9f4);
+                animation: btn-anim2 1s linear infinite;
+                animation-delay: .25s
+            }
+
+            @keyframes btn-anim2 {
+                0% {
+                    top: -100%;
+                }
+                50%,100% {
+                    top: 100%;
+                }
+            }
+
+            a span:nth-child(3) {
+                bottom: 0;
+                right: -100%;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(270deg, transparent, #03e9f4);
+                animation: btn-anim3 1s linear infinite;
+                animation-delay: .5s
+            }
+
+            @keyframes btn-anim3 {
+                0% {
+                    right: -100%;
+                }
+                50%,100% {
+                    right: 100%;
+                }
+            }
+
+            a span:nth-child(4) {
+                bottom: -100%;
+                left: 0;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(360deg, transparent, #03e9f4);
+                animation: btn-anim4 1s linear infinite;
+                animation-delay: .75s
+            }
 </style>
 </head>
 <body>
@@ -41,6 +135,17 @@
             <input type="button" value="发送(S)" class="j_sendInfor">
         </div>
     </div>
+</div>
+<div id="changer" style="position: absolute; top: 0%; right: 0%;">
+    <audio id="music" src="MV/Feint _ Veela - Vagrant.mp3" controls="controls" loop></audio>
+    <img src="" height='50px' width='50px' id="username1">
+    <a href="/Jimi.jsp" target="_blank" id="LoginOut" style="margin-top: 0px; padding-bottom: 4%; text-align: center;">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        退出
+    </a>
 </div>
 <!--jimi E-->
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
@@ -69,18 +174,23 @@ $(function(){
     })
 
     function speak() {
+        debugger;
         var content=$(".j_box").text();
         if(content){
-            //动态创建div  追加到j_right后面
-            var $div=$("<div class='j_right'>"
-                +content+":<img src="+img+" height='50px' width='50px'>"
-                +"</div>"
-            )
-            $div.appendTo(".j_con");
-            $(".j_box").text("")
-            var con = document.querySelector(".j_con")
-            con.scrollTop = con.scrollHeight;
-            insertHistory(content);
+            var teeJson = insertHistory(content);
+            $.each(teeJson.rtData, function (i,v){
+                debugger;
+                //动态创建div  追加到j_right后面
+                var $div=$("<div class='j_right'>"
+                    + "<span style='align-content: right;'>" + v.shortTime + "</span><br />"
+                    +content+":<img src="+img+" height='50px' width='50px'>"
+                    +"</div>"
+                )
+                $div.appendTo(".j_con");
+                $(".j_box").text("")
+                var con = document.querySelector(".j_con")
+                con.scrollTop = con.scrollHeight;
+            });
         }
         else{
             alert("内容不能为空!")
@@ -92,9 +202,10 @@ $(function(){
      * 插入消息
      * @returns {boolean}
      */
-    function insertHistory(content, time){
+    function insertHistory(content){
+        debugger;
         const InsertJson = tools.requestJsonRs("/InsertHistory", {content:content});
-        return InsertJson.rtState;
+        return InsertJson;
     }
 
     getImg();
@@ -110,15 +221,16 @@ $(function(){
             } else {
                 $("#goodFriend").attr("src", "images/ye.png");
             }
+            $("#username1").attr("src", imgSrc);
             return imgJson.rtState;
         }
     }
 
-    selectHistory();
+    selectHistory("1");
     // 补全历史记录
-    function selectHistory(){
+    function selectHistory(type){
         var receive;
-        const historyJson = tools.requestJsonRs("/SelectHistory");
+        const historyJson = tools.requestJsonRs("/SelectHistory", {type: type});
         if(historyJson.rtState) {
             var username = historyJson.rtData.sendUser;
             $.each(historyJson.rtData, function (i,v){
@@ -155,6 +267,25 @@ $(function(){
             var $receive = $("<span>" + receive + "</span>");
             $receive.appendTo(".j_title");
             return historyJson.rtState;
+        }
+    }
+
+    // 退出登录
+    $("#LoginOut").click(function(){
+        var loginJson = tools.requestJsonRs("/LoginOut");
+        if(loginJson.rtState) {
+            window.location.href = 'login.jsp';
+        }
+    })
+
+    setInterval(selectNewHistory, 3000); // 三秒钟查询一次是否有新消息
+
+    function selectNewHistory(){
+        debugger;
+        const historyNewJson = tools.requestJsonRs("/SelectNewHistory");
+        if(historyNewJson.rtState) {
+            // 有
+            selectHistory("2");
         }
     }
 	})

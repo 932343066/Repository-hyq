@@ -1,9 +1,7 @@
 package com.xrom.springboot.start.service;
 
 import com.xrom.springboot.start.domain.History;
-import com.xrom.springboot.start.domain.User;
 import com.xrom.springboot.start.model.HistoryModel;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -26,4 +24,26 @@ public interface HistoryService {
 	 * @return
 	 */
 	int insertHistory(History history);
+
+	/**
+	 * 修改为已读
+	 * @param sendUser
+	 * @param receiveUser
+	 */
+	void updateHistoryState(String sendUser, String receiveUser);
+
+	/**
+	 * 查询新消息
+	 * @param sendUser
+	 * @param receiveUser
+	 * @return
+	 */
+	List<HistoryModel> selectNewHistory(String sendUser, String receiveUser);
+
+	/**
+	 * 根据主键查询
+	 * @param id
+	 * @return
+	 */
+	List<HistoryModel> selectById(String id);
 }
