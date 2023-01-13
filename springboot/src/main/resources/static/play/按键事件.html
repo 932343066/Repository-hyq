@@ -1,0 +1,89 @@
+<!--兼容各个html的版本-->
+<!doctype html>
+<html>
+	<head>
+    	<!--设置编码格式 中文编码(gbk gb2312) 国际编码(utf-8) 2005前用中文编码gbk  2005后用utf-8-->
+    	<mata http-equiv="content-Type" content="text/html" charset="utf-8" />
+        <mata name="keywords" content="关键字,关键词" />
+        <mata name="description" content="" />
+        <title>按键事件</title>
+        <style type="text/css">
+        	body{ margin:0; padding:0;}
+        </style>
+    </head>
+    <body>
+    	<script type="text/javascript">
+			/*将键盘事件封装成一个方法*/
+			
+				/*按键按下就执行该函数*/
+			window.onkeydown=function(/*event*/){
+				/*为了兼容各浏览器*/
+				/*var e = event || window.event || arguments.callee.caller.arguments[0];
+					if(e.keyCode==37){//37代表 ←箭头
+						alert("我是←箭头");
+						}
+					else if(e.keyCode==38){//38代表 ↑箭头
+						alert("我是↑箭头");
+						}
+					else if(e.keyCode==39){//39代表 →箭头
+						alert("我是→箭头");
+						}
+					else if(e.keyCode==40){//40代表 ↓箭头
+						alert("我是↓箭头");
+						}
+					else if(e.keyCode==13){//13代表 enter健(回车键) 
+						alert("我是enter健(回车键)");
+						}
+					else if(e.keyCode==27){//27代表 esc健
+						alert("我是esc健");
+						}*/
+				}
+				/*按键松下就执行该函数*/
+			window.onkeyup=function(/*event*/){
+				/*为了兼容各浏览器*/
+				/*var e = event || window.event || arguments.callee.caller.arguments[0];
+					if(e.keyCode==37){//37代表 ←箭头
+						alert("我是←箭头");
+						}
+					else if(e.keyCode==38){//38代表 ↑箭头
+						alert("我是↑箭头");
+						}
+					else if(e.keyCode==39){//39代表 →箭头
+						alert("我是→箭头");
+						}
+					else if(e.keyCode==40){//40代表 ↓箭头
+						alert("我是↓箭头");
+						}
+					else if(e.keyCode==13){//13代表 enter健(回车键) 
+						alert("我是enter健(回车键)");
+						}
+					else if(e.keyCode==27){//27代表 esc健
+						alert("我是esc健");
+						}*/
+				}
+				/*不是很清楚该函数的使用规则*/
+			window.onkeypress=function(/*event*/){  
+				/*为了兼容各浏览器*/
+				/*var e = event || window.event || arguments.callee.caller.arguments[0];
+					if(e.keyCode==37){//37代表 ←箭头
+						alert("我是←箭头");
+						}
+					else if(e.keyCode==38){//38代表 ↑箭头
+						alert("我是↑箭头");
+						}
+					else if(e.keyCode==39){//39代表 →箭头
+						alert("我是→箭头");
+						}
+					else if(e.keyCode==40){//40代表 ↓箭头
+						alert("我是↓箭头");
+						}
+					else if(e.keyCode==13){//13代表 enter健(回车键) 
+						alert("我是enter健(回车键)");
+						}
+					else if(e.keyCode==27){//27代表 esc健
+						alert("我是esc健");
+						}*/
+				}
+        </script>
+    </body>
+</html>

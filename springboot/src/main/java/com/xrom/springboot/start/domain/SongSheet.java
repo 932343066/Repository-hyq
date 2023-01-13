@@ -15,4 +15,5 @@ import java.io.Serializable;
 public class SongSheet implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String name;
+    private int state;
 }

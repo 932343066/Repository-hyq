@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="1.ico" type="image/x-icon" rel="shortcut icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>省市级联</title>
+</head>
+
+<body>
+<select id="privince" onchange="privinceSelect()">
+	<option value="-1">--请选择--</option>
+    <option value="0">湖北省</option>
+    <option value="1">湖南省</option>
+    <option value="2">福建省</option>
+</select>
+<select id="city">
+</select>
+<script type="text/javascript">
+	var privinces = [
+		['荆州市','武汉市','天门市','仙桃市'],
+		['长沙市','岳阳市','湘潭市','株洲市'],
+		['厦门市','宜州市','明州市','海阳市']
+		]
+	/*
+		1、获取当前选中的省份下标
+		
+		2、获取数组
+		
+		3、在城市中动态创建option document.createElement("option")
+		
+		4、用for循环动态传入数组的值 document.createTextNode();
+	*/
+	function privinceSelect(){
+		
+		var privince=document.getElementById('privince');
+		
+		var city=document.getElementById('city');
+		
+		//alert(privince.value);
+		
+		var value=privince.value;
+		
+		var cities=privinces[value];
+		
+		city.options.length=0;
+		
+		for(var i in cities){
+			
+			var option=document.createElement('option');
+			
+			var text=document.createTextNode(cities[i]);
+			
+			option.appendChild(text);
+			
+			city.appendChild(option);
+			
+			}
+	}
+</script>
+</body>
+</html>

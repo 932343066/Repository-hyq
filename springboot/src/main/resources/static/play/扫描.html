@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+	<head>
+    	<mata http-equiv="content-Type" content="text/html" charset="utf-8" />
+        <mata name="keywords" content="关键字,关键词" />
+        <mata name="description" content="" />
+        <title>图片扫描</title>
+        <link rel="icon" href="images/1.ico" />
+        <style type="text/css">
+        	body{ 
+				margin:0; 
+				padding:0;
+				/*background:url(images/1035.jpg) no-repeat 100%/cover;*/
+				}
+			/*wrap start*/
+        	.wrap{ 
+				height:500px; 
+				width:500px; 
+				margin:50px auto;
+				border:1px white solid;
+				border-top:2px yellow solid;
+				border-right-color:green;
+				border-bottom-color:red;
+				border-left-color:blue;
+				box-shadow:5px 5px 10px 1px black;
+				border-radius:15%;
+				overflow:hidden;
+				}
+			/*wrap end*/
+			/*wrap1 start*/
+			.wrap1{ 
+				width:450px; 
+				height:0px; 
+				background:linear-gradient(red,yellow); 
+				margin:-552px auto; 
+				opacity:0.5; 
+				transform-origin:0 0;
+				border-radius:15%;
+				overflow:hidden;
+				}
+			/*wrap1 end*/
+			/*content start*/
+			.content{ 
+				width:400px; 
+				height:20px; 
+				margin:520px auto;
+				}
+			/*content end*/
+			/*btn start*/
+			.btn_s{ 
+				margin:20px 0; 
+				width:100px; 
+				line-height:20px; 
+				position:absolute; 
+				left:460px; 
+				top:550px;
+				border-radius:15px;
+				font-family:"华文行楷";
+				background:linear-gradient(skyblue,blue);
+				outline:none;
+				cursor:pointer;
+				}
+			.btn_p{ 
+				margin:20px 0; 
+				line-height:20px; 
+				width:100px;
+				position:absolute; 
+				left:630px; 
+				top:550px;
+				border-radius:15px;
+				font-family:"华文行楷";
+				/*谷歌*/
+				background:-webkit-linear-gradient(left,skyblue,blue);
+				outline:none;
+				cursor:pointer;
+				}
+			.btn_e{ 
+				margin:20px 0; 
+				line-height:20px; 
+				width:100px;
+				position:absolute; 
+				left:800px; 
+				top:550px;
+				border-radius:15px;
+				font-family:"华文行楷";
+				background:linear-gradient(skyblue,blue);
+				outline:none;
+				cursor:pointer;
+				}
+			.btn_f{ 
+				background-color:skyblue;
+				}
+			/*btn end*/
+			/*wrap2 start*/
+			.wrap2{ 
+				position:absolute; 
+				left:632px; 
+				top:10px;
+				width:100px; 
+				height:30px;
+			    margin:2px auto; 
+				border-radius:15px; 
+				background-color:#3FF;
+				/*background:linear-gradient(skyblue,pink);*/
+				}
+			.wrap2:hover{ 
+				cursor:pointer; 
+				font-size:14px;
+				background-color: #099;
+				}
+			.wrap2 .uploadImage{ 
+				cursor:pointer;
+				}
+			.wrap2 .uploadImage{
+			    line-height:30px; 
+				margin-left:18px; 
+				font-family:"华文行楷";
+				}
+			/*wrap2 end*/
+			@keyframes saomiao{	
+				/*1%{ height:5px; width:455px;
+					}
+				2%{ height:10px; width:460px;
+					}
+				5%{ height:25px; width:485px;
+					}
+				8%{ height:40px; width:490px;
+					}*/
+				10%{ 
+					height:100px; width:500px;
+					}
+				20%{ 
+					height:200px; width:500px;
+					}	
+				50%{ 
+					height:500px; width:500px;
+					}
+				/*90%{ 
+					height:500px; width:500px;
+					}
+				91%{ height:100px; width:495px;
+					}
+				92%{ height:100px; width:490px;
+					}
+				95%{ height:100px; width:485px;
+					}
+				98%{ height:100px; width:460px;
+					}*/
+				100%{
+					height:0px; width:450px;
+					}																																																																								 			}
+        </style>
+    </head>
+    <body>
+    	<!--wrap start-->
+    	<div class="wrap">
+        	<img class="w_img" />
+        </div>
+        <!--wrap end-->
+        <!--wrap1 start-->
+        <div class="wrap1"></div>
+        <!--wrap1 end-->
+        <!--input start-->
+        <input type="button" value="开始扫描" class="btn_s" />
+        <input type="button" value="暂停扫描" class="btn_p" />
+        <input type="button" value="结束扫描" class="btn_e" />
+        <!--input end-->
+        <!--wrap2 start-->
+        <div class="wrap2">
+    		<label for="uploadImage" class="uploadImage">上传图片</label>	
+        	<input type="file" name="image" value="" id="uploadImage" hidden="hidden" onchange="demo(this)" />
+    	</div>
+        <!--wrap2 end-->
+        <script type="text/javascript" src="Scripts/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript">
+			/*原生js start*/
+			
+			var w_img=document.querySelector(".w_img");
+			var wrap1=document.querySelector(".wrap1");
+        	var btn_s=document.querySelector(".btn_s");
+			var btn_p=document.querySelector(".btn_p");
+			var btn_e=document.querySelector(".btn_e");
+			/*开始扫描*/
+			btn_s.onclick=function(){
+				if(w_img.src==""){
+					alert("请选择图片")
+				}else{
+				wrap1.style.animation="saomiao 1s running infinite";
+				wrap1.style.animationDelay="1s";
+				/*wrap1.style.animationDirection="alternate";*/
+				}
+				}
+			/*暂停扫描*/
+			btn_p.onclick=function(){
+				if(w_img.src==""){
+					alert("请选择图片")
+				}else{
+				wrap1.style.animation="saomiao 1s paused infinite";
+				}
+				}
+			/*不会结束扫描 下次问老师*/
+			btn_e.onclick=function(){
+				wrap1.height="1px";
+				}
+			/*原生js end*/
+			
+			/*jQuery start*/
+			$(function(){
+				/*$(".btn_s").click(function(){
+					$(".wrap1").css({"animation":"saomiao 1s running infinite"})
+				})
+			$(".btn_p").click(function(){
+					$(".wrap1").css({"animation":"saomiao 1s paused infinite"})
+				})
+			$(".btn_e").click(function(){
+					$(".wrap1").css({"animation":"saomiao 0s"})
+				})*/
+				})
+			/*jQuery end*/
+			
+			function demo(file){
+			var d_imageHeight=$(".wrap").height();
+			var d_imageWidth=$(".wrap").width();
+			//alert("file.files"+file.files+"+++++file.files[0]"+file.files[0])
+			if (file.files && file.files[0])
+   			{
+			  var reader = new FileReader();
+			  reader.onload = function(evt){
+				  //alert("evt.target.result:"+evt.target.result);
+				  //alert("evt:"+evt);
+			  /*$(".wrap img").attr("src",evt.target.result);
+			  $(".wrap img").attr("alt","美女");
+			  $(".wrap img").attr("title","美女");*/
+			  $(".wrap img").attr({"src":evt.target.result,"alt":"美女","title":"美女"});
+			  $(".wrap img").css({"height":d_imageHeight,"width":d_imageWidth});
+			  //console.log(evt.target.result);
+     	    }
+      		  reader.readAsDataURL(file.files[0]);
+    		}
+    		else
+    		{
+     		  $(".d_image img").attr("src",evt.target.result);
+   			}
+			}
+        </script>
+    </body>
+</html>

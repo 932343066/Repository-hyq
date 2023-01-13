@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>导航栏</title>
+<style type="text/css">
+	body{
+		margin:0; 
+		padding:0; 
+		height:2000px;
+		}
+	/*wrap start*/
+	#wrap,.wrap{
+		border:1px red solid; 
+		text-align:center; 
+		width:1330px; 
+		padding:0; 
+		margin:0 auto;
+		}
+	/*wrap end*/
+	/*fixed start*/
+	.fixed{
+		position:fixed;
+		margin:0 auto;
+		 }
+	/*fixed end*/
+	a{
+		text-decoration:none;
+		}
+	/*content start*/
+	.content{
+		position: fixed; 
+		top:50%; 
+		right:0; 
+		height:60px; 
+		width:100px; 
+		text-align:center;
+		display:block; 
+		border:1px red solid;
+		color:black; 
+		font-size:24px; 
+		vertical-align: middle; 
+		line-height:20px; 
+		padding-top:40px; 
+		text-indent:0px;
+		}
+	/*.content:hover{ background:linear-gradient(red,yellow);}*/
+	.content:hover:before{ 
+		content:"";
+		}
+	.content:hover{
+		text-indent:-55px; 
+		overflow:hidden;
+		}
+	.content:hover:after{
+		content:"回到顶部";
+	    font-family:"华文楷体";
+		}
+	/*content start*/
+</style>
+</head>
+
+<body>
+	<!--wrap start-->
+    <div id="wrap" class="wrap">
+        <img src="../images/12.jpg" height="250" width="500" alt="美女" title="美女"/>
+    </div>
+    <!--wrap end-->
+	<a href="##" class="content">哈哈</a>
+    
+<script>
+	/*顶部导航栏 start*/
+	document.onscroll=function(){
+		var bodyWidth=document.body.offsetWidth;
+		var wrap=document.querySelector(".wrap");
+		var wrapOffsetHeight=wrap.offsetHeight;
+		var wrapOffsetWidth=wrap.offsetWidth;
+		var oTop=document.body.scrollTop||document.documentElement.scrollTop;
+		if(oTop>=wrapOffsetHeight){
+			wrap.classList.add("fixed");
+		}else{
+			wrap.classList.remove("fixed");
+			wrap.style.margin="0 10px";
+			}
+		}
+		/*顶部导航栏 end*/
+		/*返回顶部 start*/
+		var content=document.querySelector(".content");
+			content.onclick=function(){
+			document.body.scrollTop=document.documentElement.scrollTop=0;
+			}
+		/*返回顶部 end*/
+		
+							<!--以下是对上面的顶部导航栏进行了封装  效果一样-->
+		
+    /*function smartFloat(obj) {
+        var obj = document.getElementById(obj);
+        //var top = getTop(obj);
+		var top=getObjOffsetHeight(obj);
+        window.onscroll = function () {
+            var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            if (bodyScrollTop > top) {
+				var bodyWidth=getBodyOffsetWidth();
+				var objWidth=getObjOffsetWidth(obj);
+                obj.style.position ="fixed";
+                obj.style.top = "0px";
+				obj.style.left=(bodyWidth-objWidth)/2+"px";
+            } else {
+                obj.style.position = "static";
+            }
+        }
+        function getTop(e) {
+            var offset = e.offsetTop;
+            if (e.offsetParent != null) offset += getTop(e.offsetParent);
+            return offset;
+        }
+		function getBodyOffsetWidth() {
+			var bodyOffsetWidth=document.body.offsetWidth;
+            return bodyOffsetWidth;
+        }
+		function getObjOffsetWidth(obj){
+			var objOffsetWidth=obj.offsetWidth;
+			return objOffsetWidth;
+			}
+		function getObjOffsetHeight(obj){
+			var objOffsetHeight=obj.offsetHeight;
+			return objOffsetHeight;
+			}
+    }
+    window.onload = function () {
+        smartFloat("wrap");
+    }*/
+</script>
+</body>
+</html>

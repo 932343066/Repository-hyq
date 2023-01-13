@@ -4,13 +4,94 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96261cea-7234-42e3-a9cb-415006d7af5e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/MV/HereWeAreAgain.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/MV/why .mp4" afterDir="false" />
+    <list default="true" id="96261cea-7234-42e3-a9cb-415006d7af5e" name="Changes" comment="添加mp4">
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/MV/CMA - Forgive Me.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/MV/Otokaze - 夏恋.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/MV/rich-man.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/MV/sAr - what for_.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/css/Jimi.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/css/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/css/video.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/images/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/images/2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/images/3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/images/4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/images/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/images/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/images/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/images/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/images/emo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/images/love1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/images/love2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/images/love3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/js/Jimi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/js/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/js/video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/xrom/springboot/start/controller/CatoonSheetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/xrom/springboot/start/controller/CatoonSheetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/xrom/springboot/start/controller/HistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/xrom/springboot/start/controller/HistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/xrom/springboot/start/domain/CatoonSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/xrom/springboot/start/domain/CatoonSheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/xrom/springboot/start/domain/SongSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/xrom/springboot/start/domain/SongSheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/xrom/springboot/start/model/CatoonSheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/xrom/springboot/start/model/CatoonSheetModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/mapper/CatoonSheetMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/CatoonSheetMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/mapper/SongSheetMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/SongSheetMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/7.16轮播测试.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/7.16轮播测试.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/Jimi.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/Jimi.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/QQ_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/QQ_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/bootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/bootstrap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/border制作三角形.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/border制作三角形.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/div动画.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/div动画.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/file.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/file.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/frameset.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/frameset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/function的原型.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/function的原型.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/leftpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/leftpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/line-gradient和radial-gradient和conic-gradient.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/line-gradient和radial-gradient和conic-gradient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/nth-child和nth-of-type.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/nth-child和nth-of-type.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/pageoffset和offset与client与scroll.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/pageoffset和offset与client与scroll.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/placehold的默认颜色.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/placehold的默认颜色.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/rightpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/rightpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/text-stroke.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/text-stroke.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/this和闭包和原型和作用域.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/this和闭包和原型和作用域.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/toppage.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/toppage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/transform.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/transform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/type of和instance.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/type of和instance.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/video.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/video.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/youjian.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/youjian.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/z-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/z-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/不被解析.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/不被解析.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/不被解析的源码.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/不被解析的源码.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/动态创建五个button.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/动态创建五个button.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/去掉浮动的七种方法.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/去掉浮动的七种方法.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/右键事件.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/右键事件.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/四大伪元素after和before和first-line和first-letter.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/四大伪元素after和before和first-line和first-letter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/图像灰度处理.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/图像灰度处理.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/导航栏.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/导航栏.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/左右无缝轮播.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/左右无缝轮播.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/弹幕姬.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/弹幕姬.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/手风琴.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/手风琴.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/扫描.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/扫描.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/按键事件.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/按键事件.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/相册.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/相册.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/省市级联.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/省市级联.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/背景颜色.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/背景颜色.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/表白神器.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/表白神器.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/视频.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/视频.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/高德地图.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/高德地图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/鼠标悬浮1.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/鼠标悬浮1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/鼠标悬浮2.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/鼠标悬浮2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/static/鼠标悬浮3.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/static/play/鼠标悬浮3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +105,7 @@
         <option value="932343066 &lt;50506247+932343066@users.noreply.github.com&gt;" />
       </list>
     </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -77,24 +159,29 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/study/project/SpringbootService/SpringbootCode/code/Repository-hyq/springboot/src/main/resources/static/MV",
+    "last_opened_file_path": "F:/study/project/SpringbootService/SpringbootCode/code/Repository-hyq/springboot/src/main/resources/static/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files"
+    "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files",
+    "spring.configuration.checksum": "d164d99c46d45be6b1e7585ff7ea10e7"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\study\project\SpringbootService\SpringbootCode\code\Repository-hyq\springboot\src\main\resources\static\images" />
       <recent name="F:\study\project\SpringbootService\SpringbootCode\code\Repository-hyq\springboot\src\main\resources\static\MV" />
+      <recent name="F:\study\project\SpringbootService\SpringbootCode\code\Repository-hyq\springboot\src\main\resources\static\css" />
+      <recent name="F:\study\project\SpringbootService\SpringbootCode\code\Repository-hyq\springboot\src\main\resources\static\js" />
       <recent name="F:\study\project\SpringbootService\SpringbootCode\code\Repository-hyq\springboot\src\main\java\com\xrom\springboot\start\service" />
-      <recent name="F:\study\project\SpringbootService\SpringbootCode\code\Repository-hyq\springboot\src\main\resources\mapper" />
-      <recent name="F:\study\project\SpringbootService\SpringbootCode\code\Repository-hyq\springboot\src\main\java\com\xrom\springboot\start\service\impl" />
-      <recent name="F:\study\project\SpringbootService\SpringbootCode\code\Repository-hyq\springboot\src\main\java\com\xrom\springboot\start\model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\study\project\SpringbootService\SpringbootCode\code\Repository-hyq\springboot\src\main\resources\static\play" />
     </key>
   </component>
   <component name="RunManager">
@@ -118,6 +205,8 @@
       <option name="presentableId" value="Default" />
       <updated>1673447920838</updated>
       <workItem from="1673447923517" duration="1877000" />
+      <workItem from="1673521461083" duration="3108000" />
+      <workItem from="1673579416353" duration="23002000" />
     </task>
     <task id="LOCAL-00001" summary="提交项目">
       <created>1673448153644</created>
@@ -140,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673519644646</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="添加mp4">
+      <created>1673521588094</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673521588094</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +258,7 @@
     <MESSAGE value="提交项目" />
     <MESSAGE value="修改user" />
     <MESSAGE value="提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交" />
+    <MESSAGE value="添加mp4" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加mp4" />
   </component>
 </project>

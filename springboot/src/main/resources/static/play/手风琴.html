@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>手风琴</title>
+<style type="text/css">
+	html,body{
+		height:100%;
+		margin:0;
+		padding:0;
+		}
+	p{ 
+		margin:0;
+		}
+	.wrap{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        /*background-image:url(images/1032.jpg);
+        background-repeat:no-repeat;
+        background-position:100%;
+        background-size:cover;*/
+        background: url("../images/1032.jpg") no-repeat 100%/cover;
+    }
+	.wrap:nth-child(1) {
+        background: url("../images/1032.jpg") no-repeat 100%/cover;
+    }
+	.wrap:nth-child(2) {
+        background: url("../images/1033.jpg") no-repeat 100%/cover;
+    }
+	.wrap:nth-child(3) {
+        background: url("../images/1034.jpg") no-repeat 100%/cover;
+    }
+	.wrap:nth-child(4) {
+        background: url("../images/1035.jpg") no-repeat 100%/cover;
+    }
+	.content{
+		position:absolute;
+		top:50%;
+		left:50%;
+		width:1089px;
+		height:429px;
+		background-color:pink;
+		transform:translate(-50%,-50%);
+		}
+	.content ul{
+		list-style:none;
+		margin:0px;
+		padding-left:0px;
+		}
+	.list {
+        float: left;
+        width: 100px;
+        height: 429px;
+        background: url(../images/1032.jpg) no-repeat 100%/cover;
+        box-shadow: 0px 0px 9px 7px black;
+    }
+	.list:nth-child(1) {
+        background: url(../images/1032.jpg) no-repeat 100%/cover;
+    }
+	.list:nth-child(2) {
+        background: url(../images/1033.jpg) no-repeat 100%/cover;
+    }
+	.list:nth-child(3) {
+        background: url(../images/1034.jpg) no-repeat 100%/cover;
+    }
+	.list:nth-child(4) {
+        width: 789px;
+        background: url(../images/1035.jpg) no-repeat 100%/cover;
+    }
+	.list div{
+		background-color:rgba(0,0,0,.5);
+		width:100px;
+		height:429px;
+		}
+	.list div p{
+		padding:20px 40px;
+		color:white;
+		
+		}
+</style>
+</head>
+<body>
+	<div class="wrap"></div>  
+    <div class="wrap"></div> 
+    <div class="wrap"></div> 
+    <div class="wrap"></div> 
+    <div class="content">
+    	<ul>
+        	<li class="list">
+            	<div>
+                	<p>兜兜转转你始终会停在我身边</p>
+                </div>
+            </li>
+            <li class="list">
+            	<div>
+                	<p>兜兜转转你始终会停在我身边</p>
+                </div>
+            </li>
+            <li class="list">
+            	<div>
+                	<p>兜兜转转你始终会停在我身边</p>
+                </div>
+            </li>
+            <li class="list">
+            	<div>
+                	<p>兜兜转转你始终会停在我身边</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script>
+    	$(function(){
+			var li=$(".list")
+			li.click(function(){
+				var index=$(this).index()
+				$(this).stop().animate({
+					width:"789px"
+					},500).siblings("li").animate({
+					width:"100px"	
+					},500)
+					$(".wrap").eq(index).fadeIn().siblings(".wrap").fadeOut();
+				})
+				
+			})
+    </script>
+</body>
+</html>

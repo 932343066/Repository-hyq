@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+    	<!--设置编码格式 中文编码(gbk gb2312) 国际编码(utf-8)-->
+    	<mata http-equiv="content-Type" content="text/html" charset="utf-8" />
+        <mata name="keywords" content="关键字,关键词" />
+        <mata name="description" content="" />
+        <title>file</title>
+        <style type="text/css">
+        	body{ 
+				margin:0; 
+				padding:0;
+				}
+			/*wrap start*/
+			.wrap{ 
+				width:100px; 
+				height:30px; 
+				margin:2px auto; 
+				border-radius:15px; 
+				background-color:#3FF;
+				}
+			.wrap:hover{ 
+				cursor:pointer; 
+				background-color: #099;
+				}
+			.wrap .uploadImage{ 
+				cursor:pointer;
+				}
+			.wrap .uploadImage{ 
+				line-height:30px; 
+				margin-left:18px; 
+				font-family:"华文行楷";
+				}
+			/*wrap end*/
+			/*d_image start*/		
+			.d_image{ 
+				width:200px; 
+				height:150px;  
+				margin:10px auto;
+				}
+			.d_image image{ 
+				border:none;
+				}
+			/*d_image end*/
+        </style>
+    </head>
+    <body>
+    <!--wrap start-->
+    <div class="wrap">
+    	<label for="uploadImage" class="uploadImage">上传图片</label>	
+        <input type="file" name="image" value="" id="uploadImage" hidden="hidden" onchange="demo(this)" />
+    </div>
+    <!--wrap end-->
+    <!--d_image start-->
+    <div class="d_image">
+    	<img />
+    </div>
+    <!--d_image end-->
+    <script type="text/javascript" src="Scripts/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+		function demo(file){
+			var d_imageHeight=$(".d_image").height();
+			var d_imageWidth=$(".d_image").width();
+			alert("file.files"+file.files+"+++++file.files[0]"+file.files[0])
+			if (file.files && file.files[0])
+   			{
+			  var reader = new FileReader();
+			  reader.onload = function(evt){
+				  //alert("evt.target.result:"+evt.target.result);
+				  //alert("evt:"+evt);
+			  $(".d_image img").attr("src",evt.target.result)
+			  $(".d_image img").css({"height":d_imageHeight,"width":d_imageWidth});
+			  console.log(evt.target.result)
+     	    }
+      		  reader.readAsDataURL(file.files[0]);
+    		}
+    		else
+    		{
+     		  jQuery(".d_image img").attr("src",evt.target.result)
+   			}
+		}
+    </script>
+    </body>
+</html>

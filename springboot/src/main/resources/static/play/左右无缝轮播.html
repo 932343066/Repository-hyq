@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>左右无缝轮播</title>
+<style type="text/css">
+	body{
+		margin:0; 
+		padding:0;
+		}
+	ul{
+		list-style:none; 
+		margin:0; 
+		padding:0;
+		}
+	/*wrap start*/
+	.wrap{
+		margin:50px auto; 
+		width:800px; 
+		border:1px red solid; 
+		text-align:center;
+		}
+	.wrap .im{
+		white-space:nowrap; 
+		overflow:hidden; 
+		font-size:0; 
+		text-indent:-650px;
+		}
+	.wrap .im li{
+		display:inline;
+		}
+	.wrap .num{
+		position: relative;
+		}
+	.wrap .num li{
+		float:left; 
+		position:relative; 
+		top:-40px; 
+		width:10px; 
+		height:10px; 
+		background-color:#999; 
+		margin:0px; 
+		padding:0; 
+		border-radius:50%;
+		}
+	.wrap .num li:first-child{ 
+		margin-left:150px;
+		}
+	.wrap .num li:nth-child(-n+5){
+		margin-right:88px;
+		}
+	.wrap .num li.color{
+		background:red;
+		}
+	/*wrap end*/
+</style>
+</head>
+<body>
+<div class="wrap">
+	<!--im start-->
+    <ul class="im">
+        <li><img src="../images/26.jpg" width="700" height="400" alt="21" title="21"></li>
+        <li><img src="../images/21.jpg" width="700" height="400" alt="22" title="22"></li>
+        <li><img src="../images/22.jpg" width="700" height="400" alt="23" title="23"></li>
+        <li><img src="../images/23.jpg" width="700" height="400" alt="24" title="24"></li>
+        <li><img src="../images/24.jpg" width="700" height="400" alt="25" title="25"></li>
+        <li><img src="../images/25.jpg" width="700" height="400" alt="26" title="26"></li>
+    </ul>
+    <!--im end-->
+    <!--num start-->
+    <ul class="num">
+    	<li class="color"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!--num end-->
+</div>
+<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	i=0;
+	setInterval(function(){
+		i++;
+		if(i>5){
+			i=0;
+			}
+		changeNum();
+		function changeNum(){
+			$(".wrap .num li").eq(i).addClass("color").siblings().removeClass("color");
+			}
+		$(".im li:first").animate({"marginLeft":"-700px"},1000,function(){
+			$(this).css({"marginLeft":"0px"}).appendTo(".im");
+		});
+		},1100);
+	
+/*	$(".wrap .num li").hover(function(){
+		i=$(this).index();
+		alert(i);
+		changeNum();
+		},function(){});*/
+</script>
+</body>
+</html>

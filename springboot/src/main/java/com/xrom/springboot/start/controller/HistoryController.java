@@ -1,5 +1,6 @@
 package com.xrom.springboot.start.controller;
 
+import com.vdurmont.emoji.EmojiParser;
 import com.xrom.springboot.start.domain.History;
 import com.xrom.springboot.start.domain.TeeJson;
 import com.xrom.springboot.start.model.HistoryListsModel;
@@ -46,8 +47,10 @@ public class HistoryController {
 			}
 			historyService.updateHistoryState(sendUser, receiveUser);
             lists.stream().forEach(i -> {
-                i.setShortTime(i.getTime().substring(0, i.getTime().length() - 2));
-            });
+				i.setShortTime(i.getTime().substring(0, i.getTime().length() - 2));
+				String result = EmojiParser.parseToUnicode(i.getContent());
+				i.setContent(result);
+			});
 			HistoryListsModel model = new HistoryListsModel();
 			model.setHistoryLists(lists);
 			model.setSendUser(sendUser);
@@ -77,7 +80,9 @@ public class HistoryController {
 			history.setSendUser(sendUser);
 			history.setReceiveUser(receiveUser);
 			history.setTime(new Date());
-			history.setContent(content);
+			String str = content;
+			String result = EmojiParser.parseToAliases(str);
+			history.setContent(result);
 			int count = historyService.insertHistory(history);
 			List<HistoryModel> hiss = historyService.selectById(history.getId());
 			hiss.stream().forEach(i -> {

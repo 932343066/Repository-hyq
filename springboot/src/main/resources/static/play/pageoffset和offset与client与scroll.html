@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>pageoffset和offset与client与scroll</title>
+<style type="text/css">
+	/*设置和重置默认样式*/
+	body{ 
+		margin:20px; 
+		padding:20px; 
+		border:1px red solid; 
+		height:1000px; 
+		overflow:auto;
+		}
+	/*body::after{
+		content:"哈哈";
+		}*/
+	/*wrap start*/
+	.wrap{ 
+		width:200px; 
+		height:200px; 
+		border:1px red solid; 
+		padding:10px; 
+		margin:10px; 
+		background:linear-gradient(red,yellow);
+		}
+	/*wrap end*/
+</style>
+</head>
+
+<body>
+	<!--wrap start-->
+	<div class="wrap"></div>
+    <!--wrap end-->
+    <script type="text/javascript">
+	
+					/*pageoffset:jquery 到jquery了在研究
+					  offset、client、scroll:js jquery */
+		/*原生js start*/			  
+    	var wrap=document.querySelector(".wrap");
+		
+		/*六个offset start*/                  /*返回值无单位 纯数字*/
+		var offsetWidth=wrap.offsetWidth;      
+		var offsetHeight=wrap.offsetHeight;
+		var offsetTop=wrap.offsetTop;           
+		var offsetLeft=wrap.offsetLeft;
+		var offsetLeft=wrap.offsetLeft;
+		/*alert("offsetWidth:"+offsetWidth+"offsetHeight:"+offsetHeight
+			 +"offsetTop:"+offsetTop+"offsetLeft:"+offsetLeft);*/
+		/*222 222 10 10  offsetWidth,offsetHeight(内容+padding+border
+					     offsetTop,offsetLeft(该元素边框的外层与父类边框的外层的距离)*/
+		/*六个offset end*/
+		
+		/*四个client start*/ 				/*返回值无单位 纯数字*/
+		var clientWidth=wrap.clientWidth;
+		var clientHeight=wrap.clientHeight;
+		var clientTop=wrap.clientTop;
+		var clientLeft=wrap.clientLeft;
+		/*alert("clientWidth:"+clientWidth+"clientHeight:"+clientHeight
+			 +"clientTop:"+clientTop+"clientLeft:"+clientLeft);*/
+		/*220 220 1 1 clientWidth,clientHeight(内容+padding)
+					  clientTop,clientLeft(就是该元素的边框大小)*/
+    	/*四个client end*/
+		
+		/*四个scroll start*/ 				/*返回值无单位 纯数字*/
+		var scrollWidth=wrap.scrollWidth;
+		var scrollHeight=wrap.scrollHeight;
+		var scrollTop=wrap.scrollTop;
+		var scrollLeft=wrap.scrollLeft;
+		//var bodyScrollHeight=document.body.scrollHeight;//内容+padding
+		//alert(bodyScrollHeight);
+		/*alert("scrollWidth:"+scrollWidth+"scrollHeight:"+scrollHeight
+			 +"scrollTop:"+scrollTop+"scrollLeft:"+scrollLeft);/*
+		/*220 220 0 0 scrollWidth,scrollHeight(滚动内容的高度 内容+padding)
+					  scrollTop,scrollLeft(当前内容距离滑轮最顶端(最左端)的内容的距离)*/
+    	/*四个scroll end*/
+		/*原生js end+*/
+    </script>
+</body>
+</html>
